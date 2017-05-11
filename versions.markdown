@@ -1,18 +1,20 @@
-# unreleased
+# 1.0
 ## Fixes:
-- Fix quests not increasing spell counter
-- Improve German translations
-- Improve Chinese translations
-- Fix memory issues
-- Fix an issue where opponent name and class were not modified
-- Fix an issue where golden cards were not exported to Hearthstone
+- Fixed quests not increasing spell counter.
+- Improved German translations.
+- Improved Chinese translations.
+- Added an option to use macOS's Notification Center
+- Fixed memory issues and decreased general memory usage.
+- Fixed an issue where opponent name and class were not updated.
+- Fixed an issue where golden cards were not exported to Hearthstone.
 
 ## New: 
-- Auto check and download arena helper card tier list
-- Hero power has been added to damage counter
+- Auto check and download arena helper card tier list.
+- Hero power has been added to damage counter.
+- Add a button to open your Track-o-bot profile in the settings.
 
 ## Changes:
-- Rewrite of a lot of core parts
+- Rewrite of a lot of core parts.
 
 # 0.20.1
 ## Fixes:

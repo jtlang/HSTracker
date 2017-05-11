@@ -257,7 +257,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 		
 		if let activeDeck = Settings.activeDeck {
-			self.coreManager.game.set(activeDeckId: activeDeck)
+			self.coreManager.game.set(activeDeckId: activeDeck, autoDetected: false)
 		}
 		
 		splashscreen?.close()
@@ -432,7 +432,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func playDeck(_ sender: NSMenuItem) {
 		if let deck = sender.representedObject as? Deck {
 			let deckId = deck.deckId
-			self.coreManager.game.set(activeDeckId: deckId)
+			self.coreManager.game.set(activeDeckId: deckId, autoDetected: false)
 		}
 	}
 	
@@ -467,11 +467,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			let deck = Deck()
 			deck.playerClass = playerClass
             deck.name = player.name ?? "Custom \(playerClass)"
-            player.playerCardList.filter({ $0.collectible == true }).forEach {
-                deck.add(card: $0)
-            }
-            
-            RealmHelper.add(deck: deck)
+			let playerCardlist = player.playerCardList.filter({ $0.collectible == true })
+			
+			RealmHelper.add(deck: deck, with: playerCardlist)
             deckManager?.currentDeck = deck
             deckManager?.editDeck(self)
 		}

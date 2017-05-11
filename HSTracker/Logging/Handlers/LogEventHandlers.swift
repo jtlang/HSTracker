@@ -23,7 +23,7 @@ protocol PowerEventHandler: class {
 	func set(currentEntity id: Int)
 	func set(playerHero cardId: String)
 	func set(opponentHero cardId: String)
-	func set(activeDeckId: String?)
+	func set(activeDeckId: String?, autoDetected: Bool)
 	
 	var player: Player! { get set }
 	var opponent: Player! { get set }
@@ -64,7 +64,7 @@ protocol PowerEventHandler: class {
 	
 	var gameEnded: Bool { get set }
 	
-	func gameStart(at timestamp: Date)
+	func gameStart(at timestamp: LogDate)
 	
 	func gameEnd()
 	
