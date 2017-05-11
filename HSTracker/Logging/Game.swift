@@ -134,10 +134,14 @@ class Game: NSObject, PowerEventHandler {
 				( (Settings.hideAllTrackersWhenNotInGame && !self.gameEnded)
 					|| (!Settings.hideAllTrackersWhenNotInGame) || self.selfAppActive ) &&
 				( (Settings.hideAllWhenGameInBackground &&
-					self.hearthstoneRunState.isActive) || !Settings.hideAllWhenGameInBackground) {
+					self.hearthstoneRunState.isActive) || !Settings.hideAllWhenGameInBackground || self.selfAppActive) {
 				
 				// update cards
-				tracker.update(cards: self.opponent.opponentCardList, reset: reset)
+                if self.gameEnded && Settings.clearTrackersOnGameEnd {
+                    tracker.update(cards: [], reset: reset)
+                } else {
+                    tracker.update(cards: self.opponent.opponentCardList, reset: reset)
+                }
 				
 				let gameStarted = !self.isInMenu && self.entities.count >= 67
 				tracker.updateCardCounter(deckCount: !gameStarted ? 30 : self.opponent.deckCount,
@@ -196,7 +200,7 @@ class Game: NSObject, PowerEventHandler {
                 ( (Settings.hideAllTrackersWhenNotInGame && !self.gameEnded)
                     || (!Settings.hideAllTrackersWhenNotInGame) || self.selfAppActive ) &&
                 ( (Settings.hideAllWhenGameInBackground &&
-                    self.hearthstoneRunState.isActive) || !Settings.hideAllWhenGameInBackground) {
+                    self.hearthstoneRunState.isActive) || !Settings.hideAllWhenGameInBackground || self.selfAppActive) {
                 
                 // update cards
                 tracker.update(cards: self.player.playerCardList, reset: reset)
@@ -723,6 +727,7 @@ class Game: NSObject, PowerEventHandler {
         _matchInfo = nil
         currentFormat = Format(formatType: FormatType.ft_unknown)
         _currentGameType = .gt_unknown
+		_currentGameMode = .none
         _serverInfo = nil
 
         entities.removeAll()
