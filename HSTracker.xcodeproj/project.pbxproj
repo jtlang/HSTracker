@@ -1756,7 +1756,7 @@
 				TargetAttributes = {
 					439C7E471C7772C000D29859 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = GZ37WWWK6W;
+						DevelopmentTeam = VGS4EJ33V9;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
 					};
@@ -2658,9 +2658,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Benjamin Michotte (GZ37WWWK6W)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GZ37WWWK6W;
+				DEVELOPMENT_TEAM = VGS4EJ33V9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -2687,9 +2687,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Benjamin Michotte (GZ37WWWK6W)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GZ37WWWK6W;
+				DEVELOPMENT_TEAM = VGS4EJ33V9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
