@@ -160,8 +160,8 @@ extension CardIds.NonCollectible {
 
 extension CardIds.Secrets {
     struct Paladin {
-        static let All = [Avenge, CompetitiveSpirit, EyeForAnEye, NobleSacrifice,
-                          Redemption, Repentance, SacredTrial]
+        static let All = [Avenge, CompetitiveSpirit, EyeForAnEye, GetawayKodo,
+                          NobleSacrifice, Redemption, Repentance, SacredTrial]
         static let Avenge = CardIds.Collectible.Paladin.Avenge
         static let CompetitiveSpirit = CardIds.Collectible.Paladin.CompetitiveSpirit
         static let EyeForAnEye = CardIds.Collectible.Paladin.EyeForAnEye
